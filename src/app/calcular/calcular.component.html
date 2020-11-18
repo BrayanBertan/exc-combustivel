@@ -1,0 +1,8 @@
+<div>
+    <input type="text" [(ngModel)]="km">
+    <input type="text" [(ngModel)]="litro">
+    <button (click)="calcularGasto()">Calcular</button>
+    <p *ngIf="resultado>=13">{{resultado | number : '1.0-3'}}KM/L (Econômico)</p>
+    <p *ngIf="resultado>= 10 && resultado <=12.99">{{resultado | number : '1.0-3'}}KM/L (Normal)</p>
+    <p *ngIf="resultado< 10">{{resultado | number : '1.0-3'}}KM/L (Gastador)</p>
+</div>
